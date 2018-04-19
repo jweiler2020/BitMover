@@ -1,4 +1,7 @@
-import java.util.Scanner;
+import com.sun.xml.internal.messaging.saaj.util.ByteInputStream;
+
+import java.util.*;
+import java.io.*;
 
 public class BitMover
 {
@@ -16,6 +19,26 @@ public class BitMover
 
 	public static void shiftFile(String filename, int shift)
 	{
-		
+		FileInputStream file = null;
+		byte[] bytes;
+
+		try
+		{
+			file = new FileInputStream(filename);
+			int c;
+
+			while ((c = file.read()) != -1)
+			{
+
+			}
+		}
+		catch (FileNotFoundException e)
+		{
+			System.out.println("Error: File not found.");
+		}
+		catch (IOException e)
+		{
+			System.out.println("Error: Something went wrong reading the file.");
+		}
 	}
 }
